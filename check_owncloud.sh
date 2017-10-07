@@ -18,11 +18,11 @@ STATUS=`curl -s 'SERVER-URL/owncloud/status.php' | jq -r '.maintenance'`
 
 if [ "$STATUS" == "false" ]
 then
-  echo "Owcloud running"
+  echo "Owncloud running"
   exit 0
 elif [ "$STATUS" == "true" ]
 then
-  echo "Owcloud in MAINTENANCE MODE"
+  echo "Owncloud in MAINTENANCE MODE"
   exit 1
 else
   echo "Owncloud NOT RUNNING"
